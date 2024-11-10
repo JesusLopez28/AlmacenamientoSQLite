@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_parques"
+        android:title="@string/mis_parques"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_listado_parques"
+        android:title="@string/listado_de_parques"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_guardabosques"
+        android:title="@string/mis_guardabosques"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_listado_guardabosques"
+        android:title="@string/listado_de_guardabosques"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_cerrar_sesion"
+        android:title="@string/cerrar_sesi_n"
+        app:showAsAction="ifRoom" />
+
+</menu>
