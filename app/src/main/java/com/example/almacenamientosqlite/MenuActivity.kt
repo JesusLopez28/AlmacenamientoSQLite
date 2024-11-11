@@ -15,45 +15,41 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        // Configurar la Toolbar
         toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar) // Esto configura la Toolbar como la ActionBar
+        setSupportActionBar(toolbar)
 
-        // Cargar el fragmento por defecto
-        //loadFragment(ParquesFragment())
+        loadFragment(ParquesFragment())
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // Inflar el menú de opciones en la Toolbar
         menuInflater.inflate(R.menu.menu_options, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Manejar las opciones del menú
         return when (item.itemId) {
             R.id.menu_parques -> {
-                //loadFragment(ParquesFragment())
+                loadFragment(ParquesFragment())
                 true
             }
 
             R.id.menu_listado_parques -> {
-                //loadFragment(ListadoParquesFragment())
+                loadFragment(ListadoParquesFragment())
                 true
             }
 
             R.id.menu_guardabosques -> {
-                //loadFragment(GuardabosquesFragment())
+                loadFragment(GuardabosquesFragment())
                 true
             }
 
             R.id.menu_listado_guardabosques -> {
-                //loadFragment(ListadoGuardabosquesFragment())
+                loadFragment(ListadoGuardabosquesFragment())
                 true
             }
 
             R.id.menu_cerrar_sesion -> {
-                finish() // Cierra la actividad y vuelve a la pantalla de login
+                finish()
                 true
             }
 
@@ -62,7 +58,6 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun loadFragment(fragment: androidx.fragment.app.Fragment) {
-        // Cargar el fragmento seleccionado en el FrameLayout
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frameLayout, fragment)
         transaction.commit()
