@@ -62,6 +62,11 @@ class ParquesFragment : Fragment() {
         val tamano = tamanoEditText.text.toString().toIntOrNull() ?: 0
         val descripcion = descripcionEditText.text.toString()
 
+        if (nombre.isEmpty() || ubicacion.isEmpty() || tipo.isEmpty() || tamano == 0 || descripcion.isEmpty()) {
+            Toast.makeText(context, "Llena todos los campos", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val result = dbHelper.insertarParque(nombre, ubicacion, tipo, tamano, descripcion)
         if (result != -1L) {
             Toast.makeText(context, "Parque registrado con éxito", Toast.LENGTH_SHORT).show()

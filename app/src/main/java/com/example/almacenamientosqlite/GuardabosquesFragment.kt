@@ -22,7 +22,7 @@ class GuardabosquesFragment : Fragment() {
     private lateinit var buscarButton: Button
     private lateinit var editarButton: Button
     private lateinit var eliminarButton: Button
-    private lateinit var  btnLimpiar: Button
+    private lateinit var btnLimpiar: Button
     private var currentGuardabosqueId: Int = -1
 
     override fun onCreateView(
@@ -63,6 +63,11 @@ class GuardabosquesFragment : Fragment() {
         val aniosServicio = aniosServicioEditText.text.toString().toIntOrNull() ?: 0
         val especialidad = especialidadEditText.text.toString()
         val descripcion = descripcionEditText.text.toString()
+
+        if (nombre.isEmpty() || edad == 0 || aniosServicio == 0 || especialidad.isEmpty() || descripcion.isEmpty()) {
+            Toast.makeText(context, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         val result =
             dbHelper.insertarGuardabosque(nombre, edad, aniosServicio, especialidad, descripcion)

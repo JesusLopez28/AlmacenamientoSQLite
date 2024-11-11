@@ -6,9 +6,9 @@
     <string name="recordar_usuario">Recordar usuario</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
     <string name="salir">Salir</string>
-    <string name="mis_parques">Mis Parques</string>
+    <string name="mis_parques">Parques</string>
     <string name="listado_de_parques">Listado de Parques</string>
-    <string name="mis_guardabosques">Mis Guardabosques</string>
+    <string name="mis_guardabosques">Guardabosques</string>
     <string name="listado_de_guardabosques">Listado de Guardabosques</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
     <string name="nombre_del_guardabosque">Nombre del guardabosque</string>
@@ -29,6 +29,8 @@
     <string name="editar2">Editar</string>
     <string name="eliminar2">Eliminar</string>
     <string name="limpiar">Limpiar</string>
+    <string name="guardabosques">Guardabosques</string>
+    <string name="parques">Parques</string>
     <string-array name="tipos_parque">
         <item>Urbano</item>
         <item>Suburbano</item>

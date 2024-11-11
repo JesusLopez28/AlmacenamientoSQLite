@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -25,6 +26,10 @@ class ListadoParquesFragment : Fragment() {
 
         databaseHelper = ParqueDatabaseHelper(requireContext())
         val parquesList = databaseHelper.obtenerParques()
+
+        if (parquesList.isEmpty()) {
+            Toast.makeText(context, "No hay parques registrados", Toast.LENGTH_SHORT).show()
+        }
 
         adapter = ParquesAdapter(parquesList)
         recyclerView.adapter = adapter

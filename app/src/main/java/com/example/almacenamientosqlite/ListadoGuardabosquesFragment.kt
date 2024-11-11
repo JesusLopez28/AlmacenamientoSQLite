@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -25,6 +26,10 @@ class ListadoGuardabosquesFragment : Fragment() {
 
         databaseHelper = GuardabosqueDatabaseHelper(requireContext())
         val guardabosquesList = databaseHelper.obtenerGuardabosques()
+
+        if (guardabosquesList.isEmpty()) {
+            Toast.makeText(context, "No hay guardabosques registrados", Toast.LENGTH_SHORT).show()
+        }
 
         adapter = GuardabosquesAdapter(guardabosquesList)
         recyclerView.adapter = adapter
