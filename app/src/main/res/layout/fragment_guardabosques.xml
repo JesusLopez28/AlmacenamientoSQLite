@@ -1,10 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- layout/fragment_guardabosques.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GuardabosquesFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <EditText
+        android:id="@+id/editTextGuardabosqueNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_del_guardabosque" />
 
+    <EditText
+        android:id="@+id/editTextGuardabosqueEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="edad"
+        android:hint="@string/edad"
+        android:inputType="number" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/editTextGuardabosqueAniosServicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="años de servicio"
+        android:hint="@string/a_os_de_servicio"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextGuardabosqueEspecialidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="especialidad"
+        android:hint="@string/especialidad" />
+
+    <EditText
+        android:id="@+id/editTextGuardabosqueDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="descripción"
+        android:hint="@string/descripci_n" />
+
+    <Button
+        android:id="@+id/btnRegistrarGuardabosque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnBuscarGuardabosque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buscar"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnEditarGuardabosque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnEliminarGuardabosque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eliminar"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
