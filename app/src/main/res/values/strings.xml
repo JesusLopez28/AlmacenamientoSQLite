@@ -28,6 +28,7 @@
     <string name="buscar2">Buscar</string>
     <string name="editar2">Editar</string>
     <string name="eliminar2">Eliminar</string>
+    <string name="limpiar">Limpiar</string>
     <string-array name="tipos_parque">
         <item>Urbano</item>
         <item>Suburbano</item>

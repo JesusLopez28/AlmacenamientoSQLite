@@ -71,4 +71,10 @@
         android:text="@string/eliminar2"
         android:textColor="@android:color/white" />
 
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/limpiar"
+        android:textColor="@android:color/white" />
 </LinearLayout>
